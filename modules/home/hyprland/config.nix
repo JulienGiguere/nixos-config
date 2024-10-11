@@ -21,8 +21,8 @@
         "hyprlock"
 
         ## App auto start
-        # "[workspace 1 silent] floorp"
-        # "[workspace 2 silent] kitty"
+        "[workspace 1 silent] emacs"
+        "[workspace 8 silent] discord"
       ];
 
       input = {
@@ -31,21 +31,21 @@
         numlock_by_default = true;
         follow_mouse = 0;
         float_switch_override_focus = 0;
-        mouse_refocus = 0;
+        mouse_refocus = 1;
         sensitivity = 0;
         touchpad = {
-          natural_scroll = true;
+          natural_scroll = false;
         };
       };
 
       general = {
         "$mainMod" = "SUPER";
         layout = "dwindle";
-        gaps_in = 5;
-        gaps_out = 10;
-        border_size = 2;
-        "col.active_border" = "rgb(98971A)";
-        "col.inactive_border" = "rgb(928374)";
+        gaps_in = 2;
+        gaps_out = 4;
+        border_size = 5;
+        "col.active_border" = "rgb(ff7700) rgb(ff7700) rgb(ff7700) rgb(0bd400) rgb(ff0026)";
+        "col.inactive_border" = "rgb(595959)";
         border_part_of_window = false;
         no_border_on_floating = false;
       };

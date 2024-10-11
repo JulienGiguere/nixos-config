@@ -1,5 +1,5 @@
 {
-  description = "FrostPhoenix's nixos configuration";
+  description = "Julien Laptop Config based on FrostPhoenix's";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
