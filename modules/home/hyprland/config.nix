@@ -65,7 +65,7 @@
       dwindle = {
         no_gaps_when_only = false;
         force_split = 0;
-        special_scale_factor = 1.0;
+        special_scale_factor = 0.5;
         split_width_multiplier = 1.0;
         use_active_for_splits = true;
         pseudotile = "yes";
@@ -74,7 +74,7 @@
 
       master = {
         new_status = "master";
-        special_scale_factor = 1;
+        special_scale_factor = 0.5;
         no_gaps_when_only = false;
       };
 
@@ -144,7 +144,7 @@
         # keybindings
         "$mainMod, Return, exec, kitty"
         "ALT, Return, exec, kitty --title float_kitty"
-        "$mainMod SHIFT, Return, exec, kitty --start-as=fullscreen -o 'font_size=16'"
+        "$mainMod SHIFT, Return, exec, kitty --start-as=fullscreen -o 'font_size=8'"
         "$mainMod, B, exec, hyprctl dispatch exec '[workspace 1 silent] floorp'"
         "$mainMod, Q, killactive,"
         "$mainMod, F, fullscreen, 0"
@@ -255,14 +255,14 @@
       windowrule = [
         "float,Viewnior"
         "center,Viewnior"
-        "size 1200 800,Viewnior"
+        "size 1920 1080,Viewnior"
         "float,imv"
         "center,imv"
-        "size 1200 725,imv"
+        "size 1920 1080,imv"
         "float,mpv"
         "center,mpv"
         "tile,Aseprite"
-        "size 1200 725,mpv"
+        "size 1920 1080,mpv"
         "float,title:^(float_kitty)$"
         "center,title:^(float_kitty)$"
         "size 950 600,title:^(float_kitty)$"
@@ -334,8 +334,7 @@
     };
 
     extraConfig = "
-      monitor=,preferred,auto,auto
-
+      monitor=,preferred,auto,1
       xwayland {
         force_zero_scaling = true
       }

@@ -6,6 +6,12 @@ in
   home.packages = (with pkgs; [
     _2048
 
+    ## Editor
+    emacs
+
+    ##
+    hugo
+
     ## CLI utility
     ani-cli
     binsider
@@ -64,6 +70,7 @@ in
     ## GUI Apps
     audacity
     bleachbit                         # cache cleaner
+    firefox
     gimp
     libreoffice
     losslesscut-bin
@@ -77,6 +84,7 @@ in
     winetricks
     wineWowPackages.wayland
     zenity
+    discord
 
     # C / C++
     gcc

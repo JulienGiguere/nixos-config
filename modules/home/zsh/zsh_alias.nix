@@ -33,6 +33,7 @@
       nix-clean = "nh clean all --keep 5";
       nix-search = "nh search";
       nix-test = "nh os test";
+      rebuild  = "sudo nixos-rebuild switch --flake ~/.config/nixos-config/";
 
       # python
       piv = "python -m venv .venv";

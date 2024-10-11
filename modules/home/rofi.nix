@@ -100,7 +100,7 @@
     }
 
     element-icon {
-      size: 28px;
+      size: 16px;
     }
 
     element selected {

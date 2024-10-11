@@ -22,7 +22,7 @@ in
     enable = true;
     font = {
       name = "CaskaydiaCove Nerd Font";
-      size = 12;
+      size = 8;
     };
     theme = {
       name = "Gruvbox-Green-Dark";
@@ -41,13 +41,13 @@ in
     cursorTheme = {
       name = "Bibata-Modern-Ice";
       package = pkgs.bibata-cursors;
-      size = 24;
+      size = 12;
     };
   };
   
   home.pointerCursor = {
     name = "Bibata-Modern-Ice";
     package = pkgs.bibata-cursors;
-    size = 24;
+    size = 12;
   };
 }

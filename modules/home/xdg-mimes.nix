@@ -2,8 +2,8 @@
 with lib;
 let
   defaultApps = {
-    browser = [ "floorp.desktop" ];
-    text = [ "org.gnome.TextEditor.desktop" ];
+    browser = [ "firefox.desktop" ];
+    text = [ "emacs.desktop" ];
     image = [ "viewnior.desktop" ];
     audio = [ "mpv.desktop" ];
     video = [ "mpv.desktop" ];
@@ -12,7 +12,7 @@ let
     pdf = [ "org.gnome.Evince.desktop" ];
     terminal = [ "kitty.desktop" ];
     archive = [ "org.gnome.FileRoller.desktop" ];
-    discord = [ "webcord.desktop" ];
+    discord = [ "discord.desktop" ];
   };
 
   mimeMap = {
