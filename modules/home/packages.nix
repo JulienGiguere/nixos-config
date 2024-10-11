@@ -9,9 +9,22 @@ in
     ## Editor
     emacs
 
-    ##
+    ## Dev
     hugo
+    minikube
+    kubectl
+    docker
 
+    # C / C++
+    gcc
+    gdb
+    gnumake
+
+    # Python
+    python3
+    python312Packages.ipython
+
+    
     ## CLI utility
     ani-cli
     binsider
@@ -86,15 +99,6 @@ in
     wineWowPackages.wayland
     zenity
     discord
-
-    # C / C++
-    gcc
-    gdb
-    gnumake
-
-    # Python
-    python3
-    python312Packages.ipython
 
     inputs.alejandra.defaultPackage.${system}
   ]);
