@@ -24,7 +24,6 @@ in
     python3
     python312Packages.ipython
 
-    
     ## CLI utility
     ani-cli
     binsider
