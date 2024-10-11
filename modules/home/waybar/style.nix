@@ -15,6 +15,7 @@ let custom = {
   cyant = "#689D6A";
   orange = "#ff7700";
   orange_bright = "#FE8019";
+  orange = "#ff7700";
   opacity = "1";
   indicator_height = "2px";
 };
