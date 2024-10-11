@@ -87,10 +87,10 @@ in
     firefox
     gimp
     libreoffice
-    losslesscut-bin
     nix-prefetch-github
     obs-studio
     pavucontrol                       # pulseaudio volume controle (GUI)
+    pitivi                            # video editing
     qalculate-gtk                     # calculator
     soundwireserver                   # pass audio to android phone
     thunderbird
