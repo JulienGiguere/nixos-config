@@ -66,6 +66,7 @@ in
     pipes                             # terminal screensaver
     sl
     tty-clock                         # cli clock
+    xclip
 
     ## GUI Apps
     audacity
