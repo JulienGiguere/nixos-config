@@ -11,7 +11,10 @@
       credential.helper = "store";
       merge.conflictstyle = "diff3";
       diff.colorMoved = "default";
-    };
+
+      pull.rebase = true;
+      core.editor= "emacs";
+      };
 
     delta = {
       enable = true;
