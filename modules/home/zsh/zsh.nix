@@ -1,3 +1,5 @@
+
+
 { hostname, config, pkgs, host, ...}: 
 {
   programs.zsh = {
@@ -99,7 +101,12 @@
 
 
     initExtraFirst = ''
-      # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+      export  KUBECONFIG=$HOME/.kube/config
+      export NIX_PATH=nixos-config=/home/alex/nixos-config:nixpkgs=nixpkgs
+      export KREW_ROOT=$HOME/.krew
+      export PATH="${pkgs.krew}/bin:${pkgs.nix}/bin:${pkgs.stdenv}/bin${pkgs.bash}/bin:${pkgs.zsh}/bin:$KREW_ROOT/bin:$PATH"
+
+ # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
       # Initialization code that may require console input (password prompts, [y/n]
       # confirmations, etc.) must go above this block; everything else may go below.
       if [[ -r "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh" ]]; then

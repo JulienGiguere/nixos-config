@@ -11,15 +11,18 @@ in
 
     ## Dev
     hugo
+
+    ## DevOps
     minikube
     kubectl
     docker
-
+    kubernetes-helm
+    
     # C / C++
     gcc
     gdb
     gnumake
-
+    
     # Python
     python3
     python312Packages.ipython
@@ -66,6 +69,8 @@ in
     unzip
     valgrind                          # c memory analyzer
     wl-clipboard                      # clipboard utils for wayland (wl-copy, wl-paste)
+    clipman
+    xwayland
     wget
     yazi                              # terminal file manager
     yt-dlp-light
@@ -78,7 +83,6 @@ in
     pipes                             # terminal screensaver
     sl
     tty-clock                         # cli clock
-    xclip
 
     ## GUI Apps
     audacity
@@ -97,7 +101,9 @@ in
     winetricks
     wineWowPackages.wayland
     zenity
+    ciscoPacketTracer8
     discord
+    chromium
 
     inputs.alejandra.defaultPackage.${system}
   ]);
