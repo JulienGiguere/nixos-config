@@ -7,7 +7,7 @@
     inputs.hyprmag.packages.${pkgs.system}.hyprmag
     grim
     slurp
-    wl-clip-persist
+    wl-clipboard
     cliphist
     wf-recorder
     glib

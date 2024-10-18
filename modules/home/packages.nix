@@ -12,6 +12,9 @@ in
     ## Dev
     hugo
 
+    ## Documents
+    texlive.combined.scheme-full
+    
     ## DevOps
     minikube
     kubectl
@@ -69,7 +72,7 @@ in
     unzip
     valgrind                          # c memory analyzer
     wl-clipboard                      # clipboard utils for wayland (wl-copy, wl-paste)
-    clipman
+    cliphist
     xwayland
     wget
     yazi                              # terminal file manager
@@ -104,7 +107,7 @@ in
     ciscoPacketTracer8
     discord
     chromium
-
+    
     inputs.alejandra.defaultPackage.${system}
   ]);
 }

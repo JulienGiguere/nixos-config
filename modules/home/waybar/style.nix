@@ -13,7 +13,6 @@ let custom = {
   blue = "#458588";
   magenta = "#B16286";
   cyant = "#689D6A";
-  orange = "#ff7700";
   orange_bright = "#FE8019";
   orange = "#ff7700";
   opacity = "1";
