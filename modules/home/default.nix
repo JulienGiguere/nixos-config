@@ -21,7 +21,7 @@
     ./nvim.nix                        # neovim editor
     ./p10k/p10k.nix
     ./packages.nix                    # other packages
-    ./poweralertd.nix             # power notifications
+    #./poweralertd.nix             # power notifications
     ./retroarch.nix  
     ./rofi.nix                        # launcher
     ./scripts/scripts.nix             # personal scripts

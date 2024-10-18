@@ -1,9 +1,5 @@
 { pkgs, ... }:
-{
-  environment.systemPackages = with pkgs; [
-    poweralertd
-  ];
-  
+{  
   systemd.services.poweralertd = {
     description = "Battery monitoring daemon";
     wantedBy = [ "multi-user.target" ];
