@@ -16,6 +16,7 @@ in
     noto-fonts-emoji
     # monolisa
     # monolisa-nerd
+    iosevka
   ];
 
   gtk = {
