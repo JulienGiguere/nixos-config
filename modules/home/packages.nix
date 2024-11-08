@@ -8,9 +8,12 @@ in
 
     ## Editor
     emacs
-
+    
     ## Dev
     hugo
+    maven
+    openjdk
+    adoptopenjdk-icedtea-web
 
     ## Documents
     texlive.combined.scheme-full
@@ -20,7 +23,9 @@ in
     kubectl
     docker
     kubernetes-helm
-    
+    talosctl
+    tigervnc
+
     # C / C++
     gcc
     gdb
@@ -79,7 +84,8 @@ in
     yt-dlp-light
     xdg-utils
     xxd
-
+    pandoc
+    
     ## CLI 
     cbonsai                           # terminal screensaver
     cmatrix
@@ -107,7 +113,8 @@ in
     ciscoPacketTracer8
     discord
     chromium
-    
+    keepassxc
+
     inputs.alejandra.defaultPackage.${system}
   ]);
 }
