@@ -1,5 +1,3 @@
-
-
 { hostname, config, pkgs, host, ...}: 
 {
   programs.zsh = {
@@ -166,6 +164,8 @@
         zle -N zle-line-init
         zle -N zle-line-finish
       fi
+
+/usr/local/opt/pokemon-colorscripts/pokemon-colorscripts.py -r
     '';
   };
 

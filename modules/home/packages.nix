@@ -85,7 +85,8 @@ in
     xdg-utils
     xxd
     pandoc
-    
+    bind
+
     ## CLI 
     cbonsai                           # terminal screensaver
     cmatrix

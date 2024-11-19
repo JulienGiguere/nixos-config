@@ -25,6 +25,7 @@
       ll = "eza --icons  -a --group-directories-first -1 --no-user --long";
       tree = "eza --icons --tree --group-directories-first";
 
+      poke = "/usr/local/opt/pokemon-colorscripts/pokemon-colorscripts.py -r";
       # Nixos
       cdnix = "cd ~/nixos-config && codium ~/nixos-config";
       ns = "nom-shell --run zsh";
