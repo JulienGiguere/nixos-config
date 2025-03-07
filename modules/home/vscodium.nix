@@ -32,7 +32,9 @@ in
       ms-vscode.cpptools
       # OCaml
       ocamllabs.ocaml-platform
-
+      # Java
+      redhat.java
+      
       # Color theme
       jdinhlife.gruvbox
       # sainnhe.gruvbox-material

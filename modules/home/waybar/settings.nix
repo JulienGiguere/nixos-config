@@ -48,9 +48,11 @@ in
         calendar = {
           format = { today = "<span color='#98971A'><b>{}</b></span>"; };
         };
-        format = "  {:%H:%M}";
         tooltip= "true";
-        tooltip-format= "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
+        tooltip-format= "<tt><small>{calendar}</small></tt>";
+        #tooltip-format= "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
+        format = "{:%H:%M | %d/%m/%Y}";
+        #format = "  {:%H:%M}";
         format-alt= "  {:%d/%m}";
     };
     "hyprland/workspaces"= {

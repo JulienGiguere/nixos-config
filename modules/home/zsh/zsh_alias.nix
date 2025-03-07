@@ -35,6 +35,8 @@
       nix-search = "nh search";
       nix-test = "nh os test";
       rebuild  = "sudo nixos-rebuild switch --flake ~/.config/nixos-config/";
+      garb = "nix-collect-garbage && nix-collect-garbage -d && sudo nix-collect-garbage && sudo nix-collect-garbage -d && sudo rm /nix/var/nix/gcroots/auto/*";
+      update = "nix flake update ~/.config/nixos-config/" ;
 
       # python
       piv = "python -m venv .venv";

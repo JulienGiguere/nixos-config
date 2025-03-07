@@ -166,6 +166,8 @@
       fi
 
 /usr/local/opt/pokemon-colorscripts/pokemon-colorscripts.py -r
+
+eval "$(direnv hook zsh)"
     '';
   };
 

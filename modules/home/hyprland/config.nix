@@ -16,7 +16,7 @@
         "swaync &"
         "hyprctl setcursor Bibata-Modern-Ice 24 &"
         "swww init && swww img $(find ~/Pictures/wallpapers/ -maxdepth 1 -type f) --transition-type none &"
-
+        "hypridle"
         "hyprlock"
 
         ## App auto start
@@ -27,6 +27,7 @@
       input = {
         kb_layout = "us";
         kb_variant = "intl";
+        kb_options = "ctrl:nocaps";
         numlock_by_default = true;
         follow_mouse = 0;
         float_switch_override_focus = 0;

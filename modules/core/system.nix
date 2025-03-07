@@ -11,17 +11,36 @@
   };
   nixpkgs = {
     overlays = [
-      inputs.nur.overlay
+      inputs.nur.overlays.default
     ];
   };
 
   environment.systemPackages = with pkgs; [
     wget
     git
+
+    # Custom wrapper for Discord
+    (pkgs.writeShellApplication {
+      name = "discord";
+      text = ''
+    #!/bin/sh
+    exec ${pkgs.discord}/bin/discord --enable-features=UseOzonePlatform --ozone-platform=x11
+  '';
+    })
+
+    # Desktop entry for Discord
+    (pkgs.makeDesktopItem {
+      name = "discord";
+      exec = "discord"; # This will call the wrapper defined above
+      desktopName = "Discord";
+      comment = "Launch Discord with Wayland rendering fix";
+      icon = "${pkgs.discord}/share/pixmaps/discord.png";
+    })
   ];
 
   time.timeZone = "America/Montreal";
   i18n.defaultLocale = "en_US.UTF-8";
   nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.allowUnsupportedSystem = true;
   system.stateVersion = "24.05";
 }

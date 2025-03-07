@@ -8,12 +8,17 @@ in
 
     ## Editor
     emacs
-    
+    eclipses.eclipse-java
+    xvfb-run
+
     ## Dev
     hugo
     maven
     openjdk
     adoptopenjdk-icedtea-web
+    nodejs
+    mongodb-ce
+    jdk
 
     ## Documents
     texlive.combined.scheme-full
@@ -112,10 +117,13 @@ in
     wineWowPackages.wayland
     zenity
     ciscoPacketTracer8
-    discord
+    signal-desktop
+    tor-browser
+    
     chromium
     keepassxc
-
+    teams-for-linux
+    
     inputs.alejandra.defaultPackage.${system}
   ]);
 }
