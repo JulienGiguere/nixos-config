@@ -116,7 +116,6 @@ in
     winetricks
     wineWowPackages.wayland
     zenity
-    ciscoPacketTracer8
     signal-desktop
     tor-browser
     
