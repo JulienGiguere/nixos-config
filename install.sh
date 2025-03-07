@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
 
 init() {
-    # Vars
-    CURRENT_USERNAME='frostphoenix'
-
     # Colors
     NORMAL=$(tput sgr0)
     WHITE=$(tput setaf 7)
@@ -58,8 +55,7 @@ get_username() {
 }
 
 set_username() {
-    sed -i -e "s/${CURRENT_USERNAME}/${username}/g" ./flake.nix
-    sed -i -e "s/${CURRENT_USERNAME}/${username}/g" ./modules/home/audacious.nix
+    sed -i -e "s/username = \".*\";/username = \"$username\";/g" ./flake.nix
 }
 
 get_host() {
