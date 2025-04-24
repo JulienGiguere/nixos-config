@@ -7,28 +7,28 @@ in
     _2048
 
     ## Editor
-    emacs
-    eclipses.eclipse-java
+    #emacs
+    #eclipses.eclipse-java
     xvfb-run
 
     ## Dev
-    hugo
+    #hugo
     maven
     openjdk
     adoptopenjdk-icedtea-web
     nodejs
-    mongodb-ce
+    #mongodb-ce
     jdk
 
     ## Documents
-    texlive.combined.scheme-full
+    #texlive.combined.scheme-full
     
     ## DevOps
     minikube
     kubectl
     docker
     kubernetes-helm
-    talosctl
+    #talosctl
     tigervnc
 
     # C / C++
@@ -106,12 +106,12 @@ in
     gimp
     libreoffice
     nix-prefetch-github
-    obs-studio
+    #obs-studio
     pavucontrol                       # pulseaudio volume controle (GUI)
     pitivi                            # video editing
     qalculate-gtk                     # calculator
     soundwireserver
-    thunderbird
+    #thunderbird
     vlc
     winetricks
     wineWowPackages.wayland
@@ -119,9 +119,9 @@ in
     signal-desktop
     tor-browser
     
-    chromium
+    #chromium
     keepassxc
-    teams-for-linux
+    #teams-for-linux
     
     inputs.alejandra.defaultPackage.${system}
   ]);

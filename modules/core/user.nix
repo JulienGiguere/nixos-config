@@ -24,5 +24,4 @@
     shell = pkgs.zsh;
   };
   nix.settings.allowed-users = [ "${username}" ];
-  users.users.${username}.initialPassword = "root";
 }

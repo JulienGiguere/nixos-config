@@ -1,7 +1,7 @@
 {inputs, username, host, ...}: {
   imports = [
-    ./aseprite/aseprite.nix           # pixel art editor
-    ./audacious.nix                   # music player
+    #./aseprite/aseprite.nix           # pixel art editor
+    #./audacious.nix                   # music player
     ./bat.nix                         # better cat command
     ./btop.nix                        # resouces monitor 
     ./cava.nix                        # audio visualizer
@@ -18,21 +18,23 @@
     ./swaync/swaync.nix               # notification deamon
     ./micro.nix                       # nano replacement
     ./nemo.nix                        # file manager
-    ./nvim.nix                        # neovim editor
+    #./nvim.nix                        # neovim editor
     ./p10k/p10k.nix
     ./packages.nix                    # other packages
     #./poweralertd.nix             # power notifications
     ./retroarch.nix  
     ./rofi.nix                        # launcher
     ./scripts/scripts.nix             # personal scripts
-    ./spicetify.nix                   # spotify client
+    #./spicetify.nix                   # spotify client
     ./starship.nix                    # shell prompt
     ./swaylock.nix                    # lock screen
     ./viewnior.nix                    # image viewer
-    ./vscodium.nix                    # vscode forck
+    #./vscodium.nix                    # vscode forck
     ./waybar                          # status bar
     ./wezterm.nix                     # terminal
     ./xdg-mimes.nix                   # xdg config
     ./zsh                             # shell
-  ];
+    ./latex.nix
+    ./emacs.nix
+];
 }
