@@ -4,4 +4,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.systemd-boot.configurationLimit = 10;
   boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.initrd.preLVMCommands = ''
+    export LVM_SUPPRESS_FD_WARNINGS=1
+  '';
 }

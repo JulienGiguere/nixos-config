@@ -1,6 +1,8 @@
 {
   description = "Julien Laptop Config based on FrostPhoenix's";
 
+#https://github.com/JaKooLit/NixOS-Hyprland 
+
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nur.url = "github:nix-community/NUR";
@@ -23,17 +25,17 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     
-    spicetify-nix = {
-      url = "github:gerg-l/spicetify-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # spicetify-nix = {
+    #   url = "github:gerg-l/spicetify-nix";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
 
     hyprmag.url = "github:SIMULATAN/hyprmag";
 
-    wezterm = {
-      url = "github:wez/wezterm/main?dir=nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # wezterm = {
+    #   url = "github:wez/wezterm/main?dir=nix";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
 
     nix-flatpak.url = "github:gmodena/nix-flatpak";
   };
