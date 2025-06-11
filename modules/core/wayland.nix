@@ -1,7 +1,8 @@
 { inputs, pkgs, ... }:
 {
   programs.hyprland.enable = true;
-  xdg.portal = {
+  programs.hyprland.xwayland.enable = true;
+  xdg.portal = {		   
     enable = true;
     wlr.enable = true;
     xdgOpenUsePortal = true;

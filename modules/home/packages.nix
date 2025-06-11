@@ -4,125 +4,106 @@ let
 in
 {
   home.packages = (with pkgs; [
-    _2048
-
-    ## Editor
-    #emacs
-    #eclipses.eclipse-java
-    xvfb-run
 
     ## Dev
-    #hugo
-    maven
-    openjdk
     adoptopenjdk-icedtea-web
-    nodejs
-    #mongodb-ce
-    jdk
-
-    ## Documents
-    #texlive.combined.scheme-full
-    
-    ## DevOps
-    minikube
-    kubectl
-    docker
-    kubernetes-helm
-    #talosctl
-    tigervnc
-
-    # C / C++
     gcc
     gdb
     gnumake
-    
-    # Python
+    jdk
+    maven
+    nodejs
+    openjdk
     python3
     python312Packages.ipython
+    hugo
+    
+    ## DevOps
+    docker
+    kubectl
+    kubernetes-helm
+    minikube
+    tigervnc
 
     ## CLI utility
-    ani-cli
-    binsider
-    bitwise                           # cli tool for bit / hex manipulation
-    caligula                          # User-friendly, lightweight TUI for disk imaging
-    dconf-editor
-    docfd                             # TUI multiline fuzzy document finder
-    eza                               # ls replacement
-    entr                              # perform action when file change
-    fd                                # find replacement
-    ffmpeg
+	  ani-cli
+    bind                              # Domain Name Server
+    cliphist
+    dconf-editor                      # GTK settings editor
+    ffmpeg                            # video converter and editor
     file                              # Show file information 
-    gtt                               # google translate TUI
-    gifsicle                          # gif utility
+    gifsicle                          # gif util
     gtrash                            # rm replacement, put deleted files in system trash
-    hexdump
-    imv                               # image viewer
-    jq                                # JSON processor
-    killall
-    lazygit
-    libnotify
-	  man-pages					            	  # extra man pages
-    mimeo
-    mpv                               # video player
-    ncdu                              # disk space
-    nitch                             # systhem fetch util
-    openssl
+    hexdump                           # displays file contents in different formats
+    killall                           # kill me
+    libnotify                         # lib for desktop notifications
+    man-pages					            	  # extra man pages
+    nitch                             # systhem fetch util - not neofetch ;-;
     onefetch                          # fetch utility for git repo
+    openssl                           # cyrptographic library impl. SSL TSL protocols
     pamixer                           # pulseaudio command line mixer
+    pandoc                            # document format conversion
     playerctl                         # controller for media players
-    poweralertd
-    programmer-calculator
-    ripgrep                           # grep replacement
     swappy                            # snapshot editing tool
-    tdf                               # cli pdf viewer
-    tldr
-    todo                              # cli todo list
-    toipe                             # typing test in the terminal
+    tldr                              # simplified man pages
     ttyper                            # cli typing test
     unzip
-    valgrind                          # c memory analyzer
+    wget                              # tool to retrieve files
     wl-clipboard                      # clipboard utils for wayland (wl-copy, wl-paste)
-    cliphist
+    xdg-utils                         # desktop tools
+    xvfb-run                          # virtual X server env to run graphical applications
     xwayland
-    wget
-    yazi                              # terminal file manager
-    yt-dlp-light
-    xdg-utils
-    xxd
-    pandoc
-    bind
+    yt-dlp-light                      # youtube-dl fork
 
-    ## CLI 
-    cbonsai                           # terminal screensaver
-    cmatrix
-    pipes                             # terminal screensaver
-    sl
-    tty-clock                         # cli clock
+    # Hack
+    binsider                          # binary analizer
+    bitwise                           # cli tool for bit / hex manipulation
+    jq                                # JSON processor
+    ncdu                              # disk space cli util
+    xxd                               # create and reverse hex dumps of files
 
     ## GUI Apps
-    audacity
+    kdePackages.kolourpaint           # paint
+    audacity                          # audio editor
     bleachbit                         # cache cleaner
-    firefox
-    gimp
-    libreoffice
-    nix-prefetch-github
-    #obs-studio
+    evince                            # GNU pdf viewer
+    gimp                              # Photo Editor
+    godot_4                           # game engine
+    inputs.zen-browser.packages."${pkgs.system}".default #browser
+    keepassxc
+    libreoffice                       # Office Apps
     pavucontrol                       # pulseaudio volume controle (GUI)
     pitivi                            # video editing
     qalculate-gtk                     # calculator
-    soundwireserver
-    #thunderbird
-    vlc
-    winetricks
-    wineWowPackages.wayland
-    zenity
     signal-desktop
+    soundwireserver                   # Turn your Android into wireless speaker
     tor-browser
+    virt-manager
+    vlc                               # media player
+    wineWowPackages.wayland           # Wine
+    winetricks                        # fixes things in wine
+    zenity                            # display dialogs in commandline and shell scripts.
+    mullvad-vpn
+
+    nmap
+    iputils
+    gobuster
+    exiftool
+    thc-hydra
+    wireshark
+    ltrace
+    radare2
+    steghide
+    poppler_utils
+    qpdf
+    pdfgrep
+    binutils
+    stegseek
+    feroxbuster
+
+    tcpdump
     
-    #chromium
-    keepassxc
-    #teams-for-linux
-    
+    # Base
     inputs.alejandra.defaultPackage.${system}
   ]);
 }

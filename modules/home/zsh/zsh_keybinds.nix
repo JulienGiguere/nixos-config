@@ -1,7 +1,7 @@
-{ hostname, config, pkgs, host, ...}:
+{ hostname, config, pkgs, host, lib, ...}:
 {
   programs.zsh = {
-    initExtra = ''      
+    initContent = lib.mkBefore ''
       # Use emacs key bindings
       bindkey -e
 

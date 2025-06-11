@@ -13,6 +13,8 @@
     alejandra.url = "github:kamadorueda/alejandra/3.0.0";
   
     nix-gaming.url = "github:fufexan/nix-gaming";
+
+    zen-browser.url = "github:0xc000022070/zen-browser-flake";
   
     hyprland = {
       type = "git";

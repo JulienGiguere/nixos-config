@@ -11,4 +11,5 @@
   programs.nix-ld.libraries = with pkgs; [];
   programs.kdeconnect.enable = true;
   programs.adb.enable = true;
+  programs.wireshark.enable = true;
 }

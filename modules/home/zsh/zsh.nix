@@ -165,12 +165,14 @@
         zle -N zle-line-finish
       fi
 
-/usr/local/opt/pokemon-colorscripts/pokemon-colorscripts.py -r
 
 eval "$(direnv hook zsh)"
     '';
   };
 
+#/usr/local/opt/pokemon-colorscripts/pokemon-colorscripts.py -r
+
+  
   programs.zoxide = {
     enable = true;
     enableZshIntegration = true;

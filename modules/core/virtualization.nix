@@ -8,18 +8,20 @@
     qemu
     virt-manager
     virt-viewer
-    spice spice-gtk
+    spice
+    spice-gtk
     spice-protocol
     spice-gtk
     libvirt
     win-virtio
+    virtiofsd
     win-spice
     adwaita-icon-theme
     virtualbox
     linuxPackages.virtualboxGuestAdditions
     linuxPackages.virtualbox
   ];
-
+  
   boot.kernelModules = [ "vboxdrv" "vboxnetflt" "vboxnetadp" "vboxpci" ];
 
   # networking = {
@@ -31,7 +33,7 @@
   # Manage the virtualisation services
   virtualisation = {
     docker.enable = true;
-    virtualbox.host.enable = true;
+    #virtualbox.host.enable = true;
     libvirtd = {
       enable = true;
       qemu = {
@@ -44,3 +46,7 @@
   };
   services.spice-vdagentd.enable = true;
 }
+
+  #sudo virsh net-define /etc/libvirt/qemu/networks/default.xml
+  # sudo virsh net-start default
+  # sudo virsh net-autostart default

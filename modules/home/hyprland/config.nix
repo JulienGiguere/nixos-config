@@ -2,12 +2,12 @@
 {
   wayland.windowManager.hyprland = {
     settings = {
-      
       # autostart
       exec-once = [
+        
         "systemctl --user import-environment &"
         "hash dbus-update-activation-environment 2>/dev/null &"
-        "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &"
+        "dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &"
 
         "nm-applet &"
         "poweralertd &"
@@ -20,8 +20,8 @@
         "hyprlock"
 
         ## App auto start
-        "[workspace 1 silent] emacs"
         "[workspace 8 silent] discord"
+        "[workspace 1 silent] sh -c 'emacs --daemon && emacsclient -c -a'"
       ];
 
       input = {
@@ -46,7 +46,6 @@
         border_size = 5;
         "col.active_border" = "rgb(ff7700) rgb(ff7700) rgb(ff7700) rgb(0bd400) rgb(ff0026)";
         "col.inactive_border" = "rgb(595959)";
-        border_part_of_window = false;
         no_border_on_floating = false;
       };
 
@@ -63,7 +62,6 @@
       };
 
       dwindle = {
-        no_gaps_when_only = false;
         force_split = 0;
         special_scale_factor = 0.5;
         split_width_multiplier = 1.0;
@@ -75,7 +73,6 @@
       master = {
         new_status = "master";
         special_scale_factor = 0.5;
-        no_gaps_when_only = false;
       };
 
       decoration = {
@@ -98,13 +95,13 @@
           xray = true;
         };
 
-        drop_shadow = true;
+        # drop_shadow = true;
 
-        shadow_ignore_window = true;
-        shadow_offset = "0 2";
-        shadow_range = 20;
-        shadow_render_power = 3;
-        "col.shadow" = "rgba(00000055)";
+        # shadow_ignore_window = true;
+        # shadow_offset = "0 2";
+        # shadow_range = 20;
+        # shadow_render_power = 3;
+        # "col.shadow" = "rgba(00000055)";
       };
 
       animations = {

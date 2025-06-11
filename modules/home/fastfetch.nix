@@ -8,7 +8,7 @@
       "logo": {
         "source": "${../../.github/assets/logo/nixos-logo.png}",
         "type": "kitty-direct",
-        "width": 33,
+        "width": 22,
         "padding": {
           "top": 2
         }
