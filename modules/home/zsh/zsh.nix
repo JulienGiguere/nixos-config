@@ -1,11 +1,15 @@
-{ hostname, config, pkgs, host, ...}: 
+{ hostname, config, pkgs, host, lib, ...}: 
 {
   programs.zsh = {
     enable = true;
-    # enableCompletion = true;
+    enableCompletion = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
-
+    oh-my-zsh = {
+      enable = true;
+      plugins = [ "git" "kubectl" "docker" "sudo" ];
+    };
+    
     plugins = [
       {
         # Must be before plugins that wrap widgets, such as zsh-autosuggestions or fast-syntax-highlighting
@@ -98,7 +102,7 @@
     '';
 
 
-    initExtraFirst = ''
+    initContent = lib.mkBefore ''
       export  KUBECONFIG=$HOME/.kube/config
       export NIX_PATH=nixos-config=/home/alex/nixos-config:nixpkgs=nixpkgs
       export KREW_ROOT=$HOME/.krew

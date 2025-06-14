@@ -29,15 +29,11 @@
       # Nixos
       cdnix = "cd ~/nixos-config && codium ~/nixos-config";
       ns = "nom-shell --run zsh";
-      nix-switch = "nh os switch";
-      nix-update = "nh os switch --update";
-      nix-clean = "nh clean all --keep 5";
-      nix-search = "nh search";
-      nix-test = "nh os test";
-      rebuild  = "sudo nixos-rebuild switch --flake ~/nixos-config/";
+      rebuild  = "sudo nixos-rebuild switch --flake ~/nixos-config";
       garb = "nix-collect-garbage && nix-collect-garbage -d && sudo nix-collect-garbage && sudo nix-collect-garbage -d && sudo rm /nix/var/nix/gcroots/auto/*";
-      update = "nix flake update --flake ~/nixos-config/";
-
+      update = "nix flake update --flake ~/nixos-config";
+      
+      
       # python
       piv = "python -m venv .venv";
       psv = "source .venv/bin/activate";

@@ -8,6 +8,12 @@
       substituters = [ "https://nix-gaming.cachix.org" ];
       trusted-public-keys = [ "nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4=" ];
     };
+    # Keep only the last 5 system generations
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 5"; 
+    };
   };
   nixpkgs = {
     overlays = [
