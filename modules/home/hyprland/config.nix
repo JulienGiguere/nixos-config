@@ -1,4 +1,8 @@
 { ... }:
+let
+  browser = "zen-beta";
+  terminal = "ghostty";
+in
 {
   wayland.windowManager.hyprland = {
     settings = {
@@ -18,6 +22,10 @@
         "swww-daemon &"
 
         "hyprlock"
+
+        "${terminal} --gtk-single-instance=true --quit-after-last-window-closed=false --initial-window=false"
+        "[workspace 1 silent] ${browser}"
+        "[workspace 2 silent] ${terminal}"
       ];
 
       input = {
@@ -140,14 +148,14 @@
         "$mainMod, F1, exec, show-keybinds"
 
         # keybindings
-        "$mainMod, Return, exec, ghostty"
-        "ALT, Return, exec, [float; size 1111 700] ghostty"
-        "$mainMod SHIFT, Return, exec, [fullscreen] ghostty"
-        "$mainMod, B, exec, hyprctl dispatch exec '[workspace 1 silent] zen-beta'"
+        "$mainMod, Return, exec, ${terminal} --gtk-single-instance=true"
+        "ALT, Return, exec, [float; size 1111 700] ${terminal}"
+        "$mainMod SHIFT, Return, exec, [fullscreen] ${terminal}"
+        "$mainMod, B, exec, [workspace 1 silent] ${browser}"
         "$mainMod, Q, killactive,"
         "$mainMod, F, fullscreen, 0"
         "$mainMod SHIFT, F, fullscreen, 1"
-        "$mainMod, Space, exec, toggle_float"
+        "$mainMod, Space, exec, toggle-float"
         "$mainMod, D, exec, rofi -show drun || pkill rofi"
         "$mainMod SHIFT, D, exec, webcord --enable-features=UseOzonePlatform --ozone-platform=wayland"
         "$mainMod SHIFT, S, exec, hyprctl dispatch exec '[workspace 5 silent] SoundWireServer'"
@@ -156,11 +164,10 @@
         "$mainMod SHIFT, Escape, exec, power-menu"
         "$mainMod, P, pseudo,"
         "$mainMod, X, togglesplit,"
-        "$mainMod, T, exec, toggle_oppacity"
+        "$mainMod, T, exec, toggle-oppacity"
         "$mainMod, E, exec, nemo"
         "ALT, E, exec, hyprctl dispatch exec '[float; size 1111 700] nemo'"
-        "$mainMod SHIFT, E, exec, hyprctl dispatch exec '[float; size 1111 700] ghostty -e yazi'"
-        "$mainMod SHIFT, B, exec, toggle_waybar"
+        "$mainMod SHIFT, B, exec, toggle-waybar"
         "$mainMod, C ,exec, hyprpicker -a"
         "$mainMod, W,exec, wallpaper-picker"
         "$mainMod SHIFT, W,exec, hyprctl dispatch exec '[float; size 925 615] waypaper'"
@@ -311,7 +318,7 @@
         "opacity 1.0 override 1.0 override, class:(Unity)"
         "opacity 1.0 override 1.0 override, class:(zen)"
         "opacity 1.0 override 1.0 override, class:(evince)"
-        "workspace 1, class:^(zen)$"
+        "workspace 1, class:^(${browser})$"
         "workspace 3, class:^(evince)$"
         "workspace 4, class:^(Gimp-2.10)$"
         "workspace 4, class:^(Aseprite)$"
