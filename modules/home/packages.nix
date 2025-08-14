@@ -1,7 +1,4 @@
-{ inputs, pkgs, ... }: 
-let 
-  _2048 = pkgs.callPackage ../../pkgs/2048/default.nix {}; 
-in
+{ inputs, pkgs, ... }:
 {
   home.packages = (with pkgs; [
 
@@ -15,9 +12,9 @@ in
     nodejs
     openjdk
     python3
-    python312Packages.ipython
+    #python312Packages.ipython
     hugo
-    
+
     ## DevOps
     docker
     kubectl
@@ -31,7 +28,7 @@ in
     cliphist
     dconf-editor                      # GTK settings editor
     ffmpeg                            # video converter and editor
-    file                              # Show file information 
+    file                              # Show file information
     gifsicle                          # gif util
     gtrash                            # rm replacement, put deleted files in system trash
     hexdump                           # displays file contents in different formats
@@ -102,7 +99,7 @@ in
     feroxbuster
 
     tcpdump
-    
+
     # Base
     inputs.alejandra.defaultPackage.${system}
   ]);
