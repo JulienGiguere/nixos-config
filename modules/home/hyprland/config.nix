@@ -1,10 +1,10 @@
-{ ... }: 
+{ ... }:
 {
   wayland.windowManager.hyprland = {
     settings = {
       # autostart
       exec-once = [
-        
+
         "systemctl --user import-environment &"
         "hash dbus-update-activation-environment 2>/dev/null &"
         "dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &"
@@ -116,7 +116,7 @@
 
         animation = [
           # name, enable, speed, curve, style
-        
+
           # Windows
           "windowsIn,   0, 4, easeOutCubic,  popin 20%" # window open
           "windowsOut,  0, 4, fluent_decel,  popin 80%" # window close.
@@ -264,31 +264,7 @@
       bindm = [
         "$mainMod, mouse:272, movewindow"
         "$mainMod, mouse:273, resizewindow"
-      ];
-
-      # windowrule
-      windowrule = [
-        "float,Viewnior"
-        "center,Viewnior"
-        "size 1920 1080,Viewnior"
-        "float,imv"
-        "center,imv"
-        "size 1920 1080,imv"
-        "float,mpv"
-        "center,mpv"
-        "tile,Aseprite"
-        "size 1920 1080,mpv"
-        "float,audacious"
-        "pin,rofi"
-        "tile, neovide"
-        "idleinhibit focus,mpv"
-        "float,udiskie"
-        "float,title:^(Transmission)$"
-        "float,title:^(Volume Control)$"
-        "float,title:^(Firefox — Sharing Indicator)$"
-        "move 0 0,title:^(Firefox — Sharing Indicator)$"
-        "size 700 450,title:^(Volume Control)$"
-        "move 40 55%,title:^(Volume Control)$"
+        ", mouse:274, nil"
       ];
 
       # windowrulev2
