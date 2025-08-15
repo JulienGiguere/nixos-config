@@ -30,5 +30,6 @@
     ./zsh                             # shell
     # ./latex.nix
     ./emacs.nix
-];
+    ./fonts
+  ];
 }

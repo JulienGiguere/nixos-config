@@ -1,4 +1,4 @@
-{ pkgs ... }: {
+{ pkgs, ... }: {
   programs.waybar = {
     enable = true;
     settings = [
@@ -10,16 +10,16 @@
 	        "$HOME/.config/waybar/ModulesGroups"
 	      ];
 
- 	      "layer"= "top"
-	      "exclusive"= true
-        "passthrough"= false
-	      "position"= "bottom"
-	      "spacing"= 3
-        "fixed-center"= true
-        "ipc"= true
-        "margin-top"= 3
-        "margin-left"= 8
-        "margin-right"= 8
+ 	      "layer"= "top";
+	      "exclusive"= true;
+        "passthrough"= false;
+	      "position"= "bottom";
+	      "spacing"= 3;
+        "fixed-center"= true;
+        "ipc"= true;
+        "margin-top"= 3;
+        "margin-left"= 8;
+        "margin-right"= 8;
 
         "modules-left"= [
           "custom/separator#blank"
