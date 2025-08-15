@@ -97,7 +97,7 @@
     binutils
     stegseek
     feroxbuster
-
+    wallust
     tcpdump
 
     # Base
