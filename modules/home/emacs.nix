@@ -8,8 +8,10 @@
       lsp-ui
       tree-sitter
       tree-sitter-langs
+      treesit-grammars.with-all-grammars
 
       pkgs.tree-sitter-grammars.tree-sitter-tsx
+      pkgs.tree-sitter-grammars.tree-sitter-yaml
       pkgs.tree-sitter-grammars.tree-sitter-python
       pkgs.tree-sitter-grammars.tree-sitter-go
       pkgs.tree-sitter-grammars.tree-sitter-java

@@ -1,4 +1,4 @@
-{ self, pkgs, lib, inputs, ...}: 
+{ self, pkgs, lib, inputs, ...}:
 {
   # imports = [ inputs.nix-gaming.nixosModules.default ];
   nix = {
@@ -12,7 +12,7 @@
     gc = {
       automatic = true;
       dates = "weekly";
-      options = "--delete-older-than 5"; 
+      options = "--delete-older-than 5";
     };
   };
   nixpkgs = {
@@ -46,7 +46,11 @@
 
   time.timeZone = "America/Montreal";
   i18n.defaultLocale = "en_US.UTF-8";
-  nixpkgs.config.allowUnfree = true;
-  nixpkgs.config.allowUnsupportedSystem = true;
+
+  # Allow unstable packages.
+  nixpkgs.config = {
+    allowUnfree = true;
+    allowUnsupportedSystem = true;
+  };
   system.stateVersion = "24.05";
 }

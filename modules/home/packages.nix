@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }:
+ { inputs, pkgs, ... }:
 {
   home.packages = (with pkgs; [
 
@@ -14,13 +14,24 @@
     python3
     #python312Packages.ipython
     hugo
+    postgresql
+    tailscale
+    go
+    grpc-tools
+    yarn
+    fnm
+    chromium
+    graphviz
+    talosctl
 
     ## DevOps
     docker
+    docker-compose
     kubectl
     kubernetes-helm
     minikube
     tigervnc
+    velero
 
     ## CLI utility
 	  ani-cli
@@ -51,6 +62,8 @@
     xvfb-run                          # virtual X server env to run graphical applications
     xwayland
     yt-dlp-light                      # youtube-dl fork
+    whois
+#    fzf
 
     # Hack
     binsider                          # binary analizer
@@ -72,7 +85,7 @@
     pavucontrol                       # pulseaudio volume controle (GUI)
     pitivi                            # video editing
     qalculate-gtk                     # calculator
-    signal-desktop
+#    unstable.signal-desktop
     soundwireserver                   # Turn your Android into wireless speaker
     tor-browser
     virt-manager
@@ -81,6 +94,12 @@
     winetricks                        # fixes things in wine
     zenity                            # display dialogs in commandline and shell scripts.
     mullvad-vpn
+    nextcloud-client
+    teams-for-linux
+    slack
+    prismlauncher
+    openvpn
+    lens
 
     nmap
     iputils
@@ -93,6 +112,7 @@
     steghide
     poppler_utils
     qpdf
+    pdfcpu
     pdfgrep
     binutils
     stegseek

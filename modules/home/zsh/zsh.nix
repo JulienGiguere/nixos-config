@@ -1,4 +1,4 @@
-{ hostname, config, pkgs, host, lib, ...}: 
+{ hostname, config, pkgs, host, lib, ...}:
 {
   programs.zsh = {
     enable = true;
@@ -9,7 +9,7 @@
       enable = true;
       plugins = [ "git" "kubectl" "docker" "sudo" ];
     };
-    
+
     plugins = [
       {
         # Must be before plugins that wrap widgets, such as zsh-autosuggestions or fast-syntax-highlighting
@@ -107,6 +107,7 @@
       export NIX_PATH=nixos-config=/home/alex/nixos-config:nixpkgs=nixpkgs
       export KREW_ROOT=$HOME/.krew
       export PATH="${pkgs.krew}/bin:${pkgs.nix}/bin:${pkgs.stdenv}/bin${pkgs.bash}/bin:${pkgs.zsh}/bin:$KREW_ROOT/bin:$PATH"
+      export PATH="$PATH:$(go env GOPATH)/bin"
 
  # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
       # Initialization code that may require console input (password prompts, [y/n]
@@ -129,7 +130,7 @@
       setopt hist_verify
 
       source ~/.p10k.zsh
-      
+
       # Use fd (https://github.com/sharkdp/fd) for listing path candidates.
       # - The first argument to the function ($1) is the base path to start traversal
       # - See the source code (completion.{bash,zsh}) for the details.
@@ -169,14 +170,14 @@
         zle -N zle-line-finish
       fi
 
-
+eval "$(fnm env)"
 eval "$(direnv hook zsh)"
     '';
   };
 
 #/usr/local/opt/pokemon-colorscripts/pokemon-colorscripts.py -r
 
-  
+
   programs.zoxide = {
     enable = true;
     enableZshIntegration = true;

@@ -1,7 +1,7 @@
 { pkgs, config, ... }:
-let 
-  monolisa = pkgs.callPackage ../../pkgs/monolisa/monolisa.nix {}; 
-  monolisa-nerd = pkgs.callPackage ../../pkgs/monolisa/monolisa-nerd.nix { inherit monolisa; }; 
+let
+  monolisa = pkgs.callPackage ../../pkgs/monolisa/monolisa.nix {};
+  monolisa-nerd = pkgs.callPackage ../../pkgs/monolisa/monolisa-nerd.nix { inherit monolisa; };
 in
 {
   fonts.fontconfig.enable = true;
@@ -21,7 +21,7 @@ in
     enable = true;
     font = {
       name = "CaskaydiaCove Nerd Font";
-      size = 8;
+      size = 12;
     };
     theme = {
       name = "Gruvbox-Green-Dark";
@@ -43,7 +43,7 @@ in
       size = 12;
     };
   };
-  
+
   home.pointerCursor = {
     name = "Bibata-Modern-Ice";
     package = pkgs.bibata-cursors;

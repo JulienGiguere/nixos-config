@@ -9,6 +9,10 @@
     lvm.enable = false;
     mullvad-vpn.enable = true;
     spice-vdagentd.enable = true;
+    tailscale.enable = true;
+    postgresql.enable = true;
+    dnsmasq.enable = true;
+    dnsmasq.settings.server = ["8.8.8.8" "172.16.10.205"];
     openssh = {
       enable = true;
       ports = [ 22 ];
@@ -21,8 +25,4 @@
       };
     };
     };
-  services.logind.extraConfig = ''
-    # don’t shutdown when power button is short-pressed
-    HandlePowerKey=ignore
-  '';
 }
