@@ -13,7 +13,7 @@
     spice-protocol
     spice-gtk
     libvirt
-    win-virtio
+    virtio-win
     virtiofsd
     win-spice
     adwaita-icon-theme
@@ -21,7 +21,7 @@
     linuxPackages.virtualboxGuestAdditions
     linuxPackages.virtualbox
   ];
-  
+
   boot.kernelModules = [ "vboxdrv" "vboxnetflt" "vboxnetadp" "vboxpci" ];
 
   # networking = {
@@ -29,18 +29,13 @@
   #   bridges.br0.interfaces = [ "eth0" ];
   # };
   # networking.useNetworkd = true;
-  
+
   # Manage the virtualisation services
   virtualisation = {
     docker.enable = true;
     #virtualbox.host.enable = true;
     libvirtd = {
       enable = true;
-      qemu = {
-        swtpm.enable = true;
-        ovmf.enable = true;
-        ovmf.packages = [ pkgs.OVMFFull.fd ];
-      };
     };
     spiceUSBRedirection.enable = true;
   };

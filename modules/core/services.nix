@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   services = {
     gvfs.enable = true;
@@ -24,5 +24,5 @@
         PermitRootLogin = "prohibit-password";
       };
     };
-    };
+  };
 }

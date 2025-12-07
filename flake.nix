@@ -4,8 +4,7 @@
 #https://github.com/JaKooLit/NixOS-Hyprland
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
-    unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nur.url = "github:nix-community/NUR";
 
     hypr-contrib.url = "github:hyprwm/contrib";

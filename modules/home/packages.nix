@@ -85,7 +85,7 @@
     pavucontrol                       # pulseaudio volume controle (GUI)
     pitivi                            # video editing
     qalculate-gtk                     # calculator
-#    unstable.signal-desktop
+    signal-desktop
     soundwireserver                   # Turn your Android into wireless speaker
     tor-browser
     virt-manager
@@ -110,7 +110,7 @@
     ltrace
     radare2
     steghide
-    poppler_utils
+    poppler-utils
     qpdf
     pdfcpu
     pdfgrep

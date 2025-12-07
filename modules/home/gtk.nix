@@ -11,7 +11,7 @@ in
     pkgs.nerd-fonts.caskaydia-cove
     pkgs.nerd-fonts.symbols-only
     twemoji-color-font
-    noto-fonts-emoji
+    noto-fonts-color-emoji
     # monolisa
     # monolisa-nerd
     iosevka
