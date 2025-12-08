@@ -44,7 +44,7 @@
         gaps_in = 2;
         gaps_out = 4;
         border_size = 5;
-        "col.active_border" = "rgb(ff7700) rgb(ff7700) rgb(ff7700) rgb(0bd400) rgb(ff0026)";
+        "col.active_border" = "rgb(ff7700)";
         "col.inactive_border" = "rgb(595959)";
         no_border_on_floating = false;
       };
@@ -76,8 +76,8 @@
       };
 
       decoration = {
-        rounding = 0;
-        # active_opacity = 0.90;
+        rounding = 8;
+        # active_opacity = 0.95;
         # inactive_opacity = 0.90;
         # fullscreen_opacity = 1.0;
 

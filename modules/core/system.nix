@@ -53,4 +53,7 @@
     allowUnsupportedSystem = true;
   };
   system.stateVersion = "25.11";
+  environment.variables = {
+    GTK_THEME = "Gruvbox-Green-Dark";
+  };
 }
