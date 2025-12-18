@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }: 
+{ pkgs, lib, ... }:
 {
   programs.dconf.enable = true;
   programs.zsh.enable = true;
@@ -15,4 +15,5 @@
 
   programs.direnv.enable = true;
   programs.direnv.nix-direnv.enable = true;
+  programs.obs-studio.enableVirtualCamera = true;
 }

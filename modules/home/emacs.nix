@@ -15,6 +15,7 @@
       pkgs.tree-sitter-grammars.tree-sitter-python
       pkgs.tree-sitter-grammars.tree-sitter-go
       pkgs.tree-sitter-grammars.tree-sitter-java
+      mu4e
     ];
   };
 

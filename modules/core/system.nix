@@ -46,6 +46,11 @@
 
   time.timeZone = "America/Montreal";
   i18n.defaultLocale = "en_US.UTF-8";
+  i18n.supportedLocales = [
+    "en_US.UTF-8/UTF-8"
+    "fr_FR.UTF-8/UTF-8"
+  ];
+
 
   # Allow unstable packages.
   nixpkgs.config = {
@@ -53,7 +58,4 @@
     allowUnsupportedSystem = true;
   };
   system.stateVersion = "25.11";
-  environment.variables = {
-    GTK_THEME = "Gruvbox-Green-Dark";
-  };
 }

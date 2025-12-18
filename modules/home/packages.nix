@@ -73,6 +73,7 @@
     xxd                               # create and reverse hex dumps of files
 
     ## GUI Apps
+    obs-studio
     kdePackages.kolourpaint           # paint
     audacity                          # audio editor
     bleachbit                         # cache cleaner
@@ -100,6 +101,9 @@
     prismlauncher
     openvpn
     lens
+    pureref
+    arduino-ide
+    spotify-player
 
     nmap
     iputils
@@ -122,5 +126,7 @@
 
     # Base
     inputs.alejandra.defaultPackage.${system}
+
+    isync
   ]);
 }
