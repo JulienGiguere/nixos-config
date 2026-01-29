@@ -2,7 +2,7 @@
 {
   programs.hyprland.enable = true;
   programs.hyprland.xwayland.enable = true;
-  xdg.portal = {		   
+  xdg.portal = {
     enable = true;
     wlr.enable = true;
     xdgOpenUsePortal = true;

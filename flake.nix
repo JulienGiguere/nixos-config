@@ -51,23 +51,24 @@
       config.allowUnfree = true;
     };
     lib = nixpkgs.lib;
+    stdenv = pkgs.stdenv;
   in
   {
     nixosConfigurations = {
       desktop = nixpkgs.lib.nixosSystem {
-        inherit system;
+        inherit (pkgs) system;
         modules = [ ./hosts/desktop ];
-        specialArgs = { host="desktop"; inherit self inputs username ; };
+        specialArgs = { host="desktop"; inherit self inputs username stdenv ; };
       };
       laptop = nixpkgs.lib.nixosSystem {
-        inherit system;
+        inherit (pkgs) system;
         modules = [ ./hosts/laptop ];
-        specialArgs = { host="laptop"; inherit self inputs username ; };
+        specialArgs = { host="laptop"; inherit self inputs username stdenv ; };
       };
        vm = nixpkgs.lib.nixosSystem {
-        inherit system;
+         inherit (pkgs) system;
         modules = [ ./hosts/vm ];
-        specialArgs = { host="vm"; inherit self inputs username ; };
+        specialArgs = { host="vm"; inherit self inputs username stdenv ; };
       };
     };
   };

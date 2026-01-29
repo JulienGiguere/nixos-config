@@ -1,4 +1,4 @@
-{ pkgs, config, ... }: 
+{ pkgs, config, stdenv, ... }:
 {
   imports = [
     ./hardware-configuration.nix
@@ -11,10 +11,10 @@
     cpupower-gui
     powertop
   ];
-  
-  services = {    
+
+  services = {
     power-profiles-daemon.enable = true;
- 
+
     upower = {
       enable = true;
       percentageLow = 20;

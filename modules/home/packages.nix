@@ -1,4 +1,4 @@
- { inputs, pkgs, ... }:
+ { inputs, pkgs, stdenv, ... }:
 {
   home.packages = (with pkgs; [
 
@@ -23,6 +23,8 @@
     chromium
     graphviz
     talosctl
+    rustc
+    cargo
 
     ## DevOps
     docker
@@ -80,7 +82,7 @@
     evince                            # GNU pdf viewer
     gimp                              # Photo Editor
     godot_4                           # game engine
-    inputs.zen-browser.packages."${pkgs.system}".default #browser
+    inputs.zen-browser.packages."${pkgs.stdenv.hostPlatform.system}".default #browser
     keepassxc
     libreoffice                       # Office Apps
     pavucontrol                       # pulseaudio volume controle (GUI)
@@ -104,6 +106,8 @@
     pureref
     arduino-ide
     spotify-player
+    inkscape-extensions.inkstitch
+    inkscape
 
     nmap
     iputils
@@ -123,10 +127,10 @@
     feroxbuster
     wallust
     tcpdump
-
+    awscli2
     # Base
-    inputs.alejandra.defaultPackage.${system}
-
+    inputs.alejandra.defaultPackage.${pkgs.stdenv.hostPlatform.system}
+    mu
     isync
   ]);
 }

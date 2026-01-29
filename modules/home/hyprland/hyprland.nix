@@ -1,10 +1,10 @@
-{ inputs, pkgs, ...}:
+{ inputs, pkgs, stdenv, ...}:
 {
   home.packages = with pkgs; [
     swww
-    inputs.hypr-contrib.packages.${pkgs.system}.grimblast
+    inputs.hypr-contrib.packages.${pkgs.stdenv.hostPlatform.system}.grimblast
     hyprpicker
-    inputs.hyprmag.packages.${pkgs.system}.hyprmag
+    inputs.hyprmag.packages.${pkgs.stdenv.hostPlatform.system}.hyprmag
     grim
     slurp
     wl-clipboard
