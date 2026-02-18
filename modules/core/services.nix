@@ -13,6 +13,7 @@
     postgresql.enable = true;
     dnsmasq.enable = true;
     dnsmasq.settings.server = ["8.8.8.8" "172.16.10.205"];
+    jenkins.enable = true;
     openssh = {
       enable = true;
       ports = [ 22 ];

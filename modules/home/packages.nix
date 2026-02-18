@@ -25,6 +25,18 @@
     talosctl
     rustc
     cargo
+    vulkan-tools
+    mesa
+    mesa-demos
+    pkg-config
+    SDL2
+    SDL2_gfx
+    SDL2_mixer
+    SDL2_image
+    SDL2_ttf
+    glbinding
+    ninja
+    libcap
 
     ## DevOps
     docker
